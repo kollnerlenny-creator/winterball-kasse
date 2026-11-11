@@ -1,0 +1,18 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Winterball Kasse Pro Regeln
+    // Erlaubt Lese- und Schreibzugriff für angemeldete Nutzer (inklusive anonymer Anmeldung)
+    match /artifacts/winter-kasse-pro/public/data/{document=**} {
+      allow read, write: if request.auth != null;
+    }
+
+    // Falls die Kundenansicht auf einem Zweitgerät ohne Login geöffnet wird 
+    // oder für einen schnellen Testbetrieb vor Ort, kann alternativ folgende Regel genutzt werden:
+    // match /artifacts/winter-kasse-pro/public/data/{document=**} {
+    //   allow read, write: if true;
+    // }
+  }
+}

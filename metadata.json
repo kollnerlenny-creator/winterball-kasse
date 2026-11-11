@@ -1,0 +1,6 @@
+{
+  "name": "Winterball Kasse Pro",
+  "description": "Professionelles POS-Kassensystem für den Winterball mit Getränke- und Speisen-Kasse, Kundenansicht, Bestandsverwaltung und Kassensturz.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
