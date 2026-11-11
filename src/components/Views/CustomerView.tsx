@@ -83,7 +83,13 @@ export const CustomerView: React.FC<Props> = ({ customerPos, onClose }) => {
               <span>Winterball</span>
               <span className="text-indigo-400 font-bold text-sm sm:text-base">Kundenansicht</span>
             </h1>
-            <p className="text-[11px] text-slate-400 font-medium">Kasse {posName}</p>
+            <div className="flex items-center gap-2 mt-0.5">
+              <span className="text-xs text-slate-400 font-medium">Kasse {posName}</span>
+              <span className="text-slate-600">•</span>
+              <span className="text-xs sm:text-sm font-bold text-indigo-300 tracking-wide">
+                © Lenny Köllner
+              </span>
+            </div>
           </div>
         </div>
 
@@ -133,9 +139,19 @@ export const CustomerView: React.FC<Props> = ({ customerPos, onClose }) => {
           </p>
         </div>
 
-        <p className="absolute bottom-8 sm:bottom-12 text-slate-500 text-xs sm:text-sm font-medium animate-breathe z-10">
+        <p className="absolute bottom-16 sm:bottom-20 text-slate-500 text-xs sm:text-sm font-medium animate-breathe z-10">
           Zum Zurückkehren tippen
         </p>
+
+        {/* Prominent Author Badge */}
+        <div className="absolute bottom-5 sm:bottom-6 text-center z-10">
+          <div className="inline-flex items-center gap-2 px-5 py-2 rounded-2xl bg-slate-900/90 border border-slate-700/80 shadow-2xl backdrop-blur-md">
+            <span className="text-indigo-400 font-black text-sm sm:text-base">©</span>
+            <span className="text-xs sm:text-sm font-bold text-white tracking-wide">
+              Lenny Köllner
+            </span>
+          </div>
+        </div>
       </div>
 
       {/* Sale Success Overlay with Fluid Pop & Checkmark */}
@@ -242,10 +258,16 @@ export const CustomerView: React.FC<Props> = ({ customerPos, onClose }) => {
               </p>
             </div>
 
-            <div className="text-right pb-1">
+            <div className="text-right pb-1 flex flex-col items-end gap-1">
               <span className="text-xs sm:text-sm text-slate-400 font-medium">
                 {items.length} {items.length === 1 ? 'Artikel' : 'Artikel'}
               </span>
+              <div className="px-3 py-1 bg-slate-900 border border-slate-700/80 rounded-xl flex items-center gap-1.5 shadow-sm">
+                <span className="text-indigo-400 font-bold text-xs">©</span>
+                <span className="text-xs sm:text-sm font-bold text-slate-200 tracking-wide">
+                  Lenny Köllner
+                </span>
+              </div>
             </div>
           </div>
         </div>

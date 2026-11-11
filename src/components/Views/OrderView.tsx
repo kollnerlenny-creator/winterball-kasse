@@ -238,6 +238,10 @@ export const OrderView: React.FC<Props> = ({
           >
             Kassieren
           </button>
+
+          <div className="mt-2.5 text-center text-[10px] text-slate-500 font-medium tracking-wider">
+            © Lenny Köllner
+          </div>
         </div>
       </div>
     </div>

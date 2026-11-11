@@ -47,7 +47,7 @@ export const HistoryView: React.FC<Props> = ({ orders, onStornoOrder, onDeleteOr
       doc.setFont('helvetica', 'normal');
       doc.setFontSize(10);
       doc.setTextColor(100, 116, 139);
-      doc.text(`Erstellt am: ${new Date().toLocaleDateString('de-DE')} um ${new Date().toLocaleTimeString('de-DE')}`, marginX, y);
+      doc.text(`Erstellt am: ${new Date().toLocaleDateString('de-DE')} um ${new Date().toLocaleTimeString('de-DE')} • © Lenny Köllner`, marginX, y);
       y += 4;
 
       doc.setDrawColor(99, 102, 241);
@@ -168,7 +168,9 @@ export const HistoryView: React.FC<Props> = ({ orders, onStornoOrder, onDeleteOr
             </div>
             <div>
               <h2 className="text-2xl font-bold text-white">Buchungsverlauf</h2>
-              <p className="text-xs text-slate-400">Verkäufe einsehen, stornieren oder einzelne Belege löschen</p>
+              <p className="text-xs text-slate-400">
+                Verkäufe einsehen, stornieren oder einzelne Belege löschen • <span className="text-slate-500">© Lenny Köllner</span>
+              </p>
             </div>
           </div>
 

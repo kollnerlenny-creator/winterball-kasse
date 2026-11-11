@@ -49,6 +49,11 @@ export const Screensaver: React.FC<Props> = ({ visible, onWake, subtitle }) => {
         </p>
         <div className="w-1.5 h-1.5 bg-indigo-400 rounded-full mx-auto mt-2" />
       </div>
+
+      {/* Copyright Notice */}
+      <div className="absolute bottom-4 text-center z-10 text-[11px] font-medium text-slate-600 tracking-wider">
+        © Lenny Köllner
+      </div>
     </div>
   );
 };

@@ -818,10 +818,13 @@ export default function App() {
               <Snowflake className="text-white w-5 h-5" />
             </div>
             <div>
-              <h1 className="text-base sm:text-lg font-bold text-white tracking-tight flex items-center gap-1.5">
+              <h1 className="text-base sm:text-lg font-bold text-white tracking-tight flex items-center gap-1.5 leading-tight">
                 <span>Winterball</span>
                 <span className="text-indigo-400">Kasse</span>
               </h1>
+              <p className="text-[10px] text-slate-500 font-medium tracking-wide">
+                © Lenny Köllner
+              </p>
             </div>
             <div className="hidden sm:inline-block px-2.5 py-0.5 bg-slate-800 rounded-md text-[10px] font-bold text-indigo-400 border border-indigo-500/30 uppercase tracking-wider">
               {posName}

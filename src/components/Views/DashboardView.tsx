@@ -311,6 +311,10 @@ export const DashboardView: React.FC<Props> = ({
             </div>
           </div>
         </div>
+
+        <div className="text-center text-xs text-slate-500 font-medium tracking-wider pt-2">
+          Winterball Kasse Pro • © Lenny Köllner
+        </div>
       </div>
     </div>
   );
