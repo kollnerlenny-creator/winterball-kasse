@@ -922,61 +922,71 @@ export default function App() {
       {/* Main Views Container */}
       <main className="flex-grow relative max-w-7xl w-full mx-auto overflow-hidden">
         {currentView === 'order' && (
-          <OrderView
-            currentPos={currentPos}
-            onSetPos={setCurrentPos}
-            inventory={inventory}
-            cart={cart}
-            onAddToCart={handleAddToCart}
-            onRemoveFromCart={handleRemoveFromCart}
-            onClearCart={handleClearCart}
-            onOpenVariantModal={(name) => {
-              setSelectedProductForVar(name);
-              setShowSizeModal(true);
-            }}
-            onOpenDonationModal={() => setShowDonationModal(true)}
-            onOpenPaymentModal={() => setShowPaymentModal(true)}
-            onLoadSampleData={handleLoadSampleData}
-          />
+          <div key="view-order" className="h-full animate-viewIn">
+            <OrderView
+              currentPos={currentPos}
+              onSetPos={setCurrentPos}
+              inventory={inventory}
+              cart={cart}
+              onAddToCart={handleAddToCart}
+              onRemoveFromCart={handleRemoveFromCart}
+              onClearCart={handleClearCart}
+              onOpenVariantModal={(name) => {
+                setSelectedProductForVar(name);
+                setShowSizeModal(true);
+              }}
+              onOpenDonationModal={() => setShowDonationModal(true)}
+              onOpenPaymentModal={() => setShowPaymentModal(true)}
+              onLoadSampleData={handleLoadSampleData}
+            />
+          </div>
         )}
 
         {currentView === 'customer-select' && (
-          <CustomerSelectView
-            onSelectPos={(pos) => {
-              setCustomerPos(pos);
-              setCurrentView('customer');
-            }}
-          />
+          <div key="view-customer-select" className="h-full animate-viewIn">
+            <CustomerSelectView
+              onSelectPos={(pos) => {
+                setCustomerPos(pos);
+                setCurrentView('customer');
+              }}
+            />
+          </div>
         )}
 
         {currentView === 'dashboard' && (
-          <DashboardView
-            orders={orders}
-            inventory={inventory}
-            stats={financeStats}
-            onSaveExpenses={handleSaveExpenses}
-            onSaveCashStart={handleSaveCashStart}
-          />
+          <div key="view-dashboard" className="h-full animate-viewIn">
+            <DashboardView
+              orders={orders}
+              inventory={inventory}
+              stats={financeStats}
+              onSaveExpenses={handleSaveExpenses}
+              onSaveCashStart={handleSaveCashStart}
+            />
+          </div>
         )}
 
         {currentView === 'history' && (
-          <HistoryView
-            orders={orders}
-            onStornoOrder={handleStornoOrder}
-            onDeleteOrder={handleDeleteOrder}
-            onToast={showToast}
-          />
+          <div key="view-history" className="h-full animate-viewIn">
+            <HistoryView
+              orders={orders}
+              onStornoOrder={handleStornoOrder}
+              onDeleteOrder={handleDeleteOrder}
+              onToast={showToast}
+            />
+          </div>
         )}
 
         {currentView === 'inventory' && (
-          <InventoryView
-            inventory={inventory}
-            onSaveProduct={handleSaveProduct}
-            onDeleteProduct={handleDeleteProduct}
-            onResetApp={handleResetApp}
-            onLoadSampleData={handleLoadSampleData}
-            onToast={showToast}
-          />
+          <div key="view-inventory" className="h-full animate-viewIn">
+            <InventoryView
+              inventory={inventory}
+              onSaveProduct={handleSaveProduct}
+              onDeleteProduct={handleDeleteProduct}
+              onResetApp={handleResetApp}
+              onLoadSampleData={handleLoadSampleData}
+              onToast={showToast}
+            />
+          </div>
         )}
       </main>
 

@@ -130,10 +130,10 @@ export const OrderView: React.FC<Props> = ({
                   <div
                     key={name}
                     onClick={() => handleProductClick(name)}
-                    className={`product-card p-4 rounded-2xl flex flex-col justify-between h-32 cursor-pointer border transition-all ${
+                    className={`product-card p-4 rounded-2xl flex flex-col justify-between h-32 cursor-pointer border transition-all duration-200 ${
                       outOfStock
                         ? 'opacity-40 grayscale cursor-not-allowed border-slate-800 bg-slate-900'
-                        : 'border-slate-700/60 hover:border-indigo-500/60 bg-gradient-to-br from-slate-800 to-slate-900/90 active:scale-[0.97] hover:shadow-lg hover:shadow-indigo-500/10'
+                        : 'border-slate-700/60 hover:border-indigo-500/80 bg-gradient-to-br from-slate-800 to-slate-900/90 hover:-translate-y-0.5 active:scale-[0.96] hover:shadow-lg hover:shadow-indigo-500/20'
                     }`}
                   >
                     <div className="font-bold text-white text-sm sm:text-base leading-snug line-clamp-2">
@@ -202,7 +202,7 @@ export const OrderView: React.FC<Props> = ({
             cart.map((item, idx) => (
               <div
                 key={`${item.name}-${idx}`}
-                className="flex justify-between items-center bg-slate-800/60 p-3 rounded-xl border border-slate-700/50 hover:border-slate-600 transition-colors"
+                className="flex justify-between items-center bg-slate-800/60 p-3 rounded-xl border border-slate-700/50 hover:border-slate-600 transition-all duration-200 animate-itemIn"
               >
                 <div className="flex flex-col min-w-0 pr-2">
                   <span className="text-sm font-bold text-white truncate">{item.name}</span>

@@ -66,8 +66,8 @@ export const PinModal: React.FC<Props> = ({
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 bg-slate-950/95 backdrop-blur-xl z-[110] flex items-center justify-center p-4">
-      <div className={`max-w-xs w-full space-y-6 ${shake ? 'animate-bounce' : ''}`}>
+    <div className="fixed inset-0 bg-slate-950/95 backdrop-blur-xl z-[110] flex items-center justify-center p-4 animate-backdrop">
+      <div className={`max-w-xs w-full space-y-6 animate-modal ${shake ? 'animate-bounce' : ''}`}>
         <div className="text-center">
           <div className="bg-slate-800 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3 border border-slate-700">
             <Lock className="text-indigo-400 w-6 h-6" />

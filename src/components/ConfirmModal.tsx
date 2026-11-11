@@ -23,8 +23,8 @@ export const ConfirmModal: React.FC<Props> = ({
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-[130] flex items-center justify-center p-4">
-      <div className="bg-slate-800 p-6 md:p-8 rounded-3xl max-w-sm w-full border border-slate-700 shadow-2xl space-y-4">
+    <div className="fixed inset-0 bg-black/80 backdrop-blur-md z-[130] flex items-center justify-center p-4 animate-backdrop">
+      <div className="bg-slate-800 p-6 md:p-8 rounded-3xl max-w-sm w-full border border-slate-700 shadow-2xl space-y-4 animate-modal">
         <div className="flex items-center gap-3">
           <div className={`p-2 rounded-xl ${confirmVariant === 'danger' ? 'bg-rose-500/10 text-rose-400' : 'bg-indigo-500/10 text-indigo-400'}`}>
             <AlertCircle className="w-6 h-6" />

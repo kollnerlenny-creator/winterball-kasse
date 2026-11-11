@@ -40,8 +40,8 @@ export const DonationModal: React.FC<Props> = ({ isOpen, onClose, onConfirm }) =
   };
 
   return (
-    <div className="fixed inset-0 bg-slate-950/95 backdrop-blur-xl z-[110] flex items-center justify-center p-4">
-      <div className="max-w-sm w-full bg-slate-900 rounded-3xl border border-slate-700 shadow-2xl p-6 md:p-8 relative">
+    <div className="fixed inset-0 bg-slate-950/95 backdrop-blur-xl z-[110] flex items-center justify-center p-4 animate-backdrop">
+      <div className="max-w-sm w-full bg-slate-900 rounded-3xl border border-slate-700 shadow-2xl p-6 md:p-8 relative animate-modal">
         <button
           onClick={onClose}
           className="absolute top-4 right-4 text-slate-400 hover:text-white p-2 rounded-lg"

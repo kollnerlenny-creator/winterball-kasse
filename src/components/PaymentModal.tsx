@@ -198,8 +198,8 @@ export const PaymentModal: React.FC<Props> = ({
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 bg-slate-950/95 backdrop-blur-2xl z-[110] flex items-center justify-center p-2 sm:p-4">
-      <div className="max-w-4xl w-full bg-slate-900 rounded-3xl border border-slate-700/80 flex flex-col md:flex-row overflow-hidden shadow-2xl">
+    <div className="fixed inset-0 bg-slate-950/95 backdrop-blur-2xl z-[110] flex items-center justify-center p-2 sm:p-4 animate-backdrop">
+      <div className="max-w-4xl w-full bg-slate-900 rounded-3xl border border-slate-700/80 flex flex-col md:flex-row overflow-hidden shadow-2xl animate-modal">
         {/* Left column: Summary & Cash Calculation */}
         <div className="p-6 md:p-8 md:w-5/12 flex flex-col justify-between border-b md:border-b-0 md:border-r border-slate-800 bg-slate-900/60">
           <div>
